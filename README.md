@@ -1,2 +1,1 @@
-# churchforlife.github.io
-Church website
+# EmeraldAOG
