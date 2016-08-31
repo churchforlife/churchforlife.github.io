@@ -1,0 +1,36 @@
+{% comment %}
+  Used for generating lists of blog posts to be displayed on the site.
+  listLength: number of list items to print on the page,
+  cat: the post category to print. For all posts, don't include the value.
+  printEx: true/false print post excerpt.
+  Usage: {% include listGenerator.html cat="your_category_value_here" listLength=number_of_posts_to_display printEx=boolean %}
+{% endcomment %}
+
+<ul class="postList">
+  {% assign allPosts = site.posts | sort: date | reverse %}
+  {% if include.cat == null %}
+    {% for post in allPosts limit: include.listLength %}
+      {% if post.url %}
+        <li>
+          <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+          {% if include.printEx %}
+            <p class="excerpt">{{ post.excerpt | remove: "<p>" | remove: "</p>" }}<a class="keepReading" href="{{ post.url }}">Keep reading <i class="fa fa-arrow-right"></i></a></p>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    {% for post in allPosts limit: include.listLength %}
+      {% if post.category == include.cat %}
+        {% if post.url %}
+        <li>
+          <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+          {% if include.printEx %}
+            <p class="excerpt">{{ post.excerpt | remove: "<p>" | remove: "</p>" }}<a class="keepReading" href="{{ post.url }}">Keep reading <i class="fa fa-arrow-right"></i></a></p>
+          {% endif %}
+        </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</ul>

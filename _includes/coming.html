@@ -1,0 +1,10 @@
+<ul>
+  {% assign curDate = site.time | date: '%s' %}
+  {% assign events = site.coming-up | sort:"start" %}
+  {% for event in events %}
+      {% assign postStartDate = event.start | date: '%s' %}
+      {% if postStartDate >= curDate %}
+        <li><h3><a href="{{ event.url }}">{{ event.start | date_to_long_string }} - {{ event.title }}</a></h3></li>
+      {% endif %}
+  {% endfor %}
+</ul>
