@@ -1,0 +1,685 @@
+/*==================================================
+main.css for Church For Life
+By David Allen
+===================================================*/
+
+
+/*==================================================
+Browser reset
+
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+===================================================*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+html, body {
+	height: 100%;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*End browser reset*/
+
+/*==================================================
+GENERAL
+===================================================*/
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+#pageContainer {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	max-width: 1024px;
+	margin: 0 auto;
+	/*border: solid 3px #32241e;*/
+	/*border-radius: 15px;*/
+	/*opacity: 0.85;*/
+}
+
+body {
+	background-image: url("../img/background.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0 1.25%;
+}
+
+/*==================================================
+FONTS
+===================================================*/
+
+header h1, #mainMenu,
+#contentContainer h2,
+#contentContainer h3,
+.person.namePosition p,
+#contentContainer .share p {
+	font-family: 'Salsa', cursive;
+}
+
+header h3  {
+	font-family: 'Tangerine', cursive;
+}
+
+#contentContainer p,
+.keepReading,
+footer {
+	font-family: 'Lato', sans-serif;
+}
+
+#contentContainer .namePosition p {
+	font-family: 'Salsa', cursive;
+	padding: 0;
+}
+
+
+/*==================================================
+HEADER
+===================================================*/
+
+header {
+	/*background-image: url("../img/mountains.jpg");*/
+}
+
+header {
+	/*text-shadow: 0px 0px 1px #ddd;*/
+	color: #fff;
+	/*font-weight: bold;*/
+}
+
+header h1 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.5rem;
+	text-shadow: 0px 0px 8px #19868f;
+}
+
+header h3 {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  font-style: italic;
+	font-size: 2rem;
+	font-weight: 600;
+	text-shadow: 0px 0px 8px #19868f;
+}
+
+header #headerContainer {
+text-align: center;
+}
+
+header #headerContainer div {
+	display: inline-block;
+}
+
+	#cross {
+	font-size: 5rem;
+	text-shadow: 0px 0px 8px #19868f;
+}
+
+/*==================================================
+NAVIGATION
+===================================================*/
+
+#mainMenu {
+	color: #fff;
+	text-shadow: 0px 0px 8px #19868f;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+#mainMenu ul {
+  display: none;
+	border-left: solid transparent 0.5rem;
+	border-right: solid transparent 0.5rem;
+}
+
+#navIcon a {
+  display: block;
+  padding: 0.5rem;
+	outline: 0;
+}
+
+#mainMenu ul li a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#mainMenu ul li:hover {
+	background: rgba(36,78,129,0.75);
+}
+
+.selected {
+	background: rgba(36,78,129,0.75);
+}
+
+
+/*==================================================
+MAIN CONTENT
+===================================================*/
+
+#contentContainer {
+  flex-grow: 1;
+	border-radius: 10px;
+	border-top-right-radius: 0;
+	background: rgba(255,255,255,0.8);
+	color: #000;
+	padding: 2.5%;
+	margin-bottom: 2rem;
+}
+
+#contentContainer h2 {
+  font-size: 1.45rem;
+  padding: 0.5rem 0 0.25rem;
+	color: #244e81;
+	font-weight: bold;
+	border-bottom: solid 1px #244e81;
+}
+
+#contentContainer {
+	/*text-align: center;*/
+}
+
+#contentContainer h3 {
+	font-size: 1.25rem;
+	color: #19868f;
+	margin: 0.5rem 0 0.25rem;
+}
+
+#contentContainer p {
+	padding: 0.25rem 0;
+	text-align: justify;
+	line-height: 1.125;
+}
+
+#contentContainer p a:hover {
+	text-decoration: underline;
+}
+
+#contentContainer img {
+	display: block;
+	margin: 0 auto;
+}
+
+#contentContainer .postList h3 {
+	display: inline-block;
+	margin: 0;
+}
+
+#latestContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.excerpt {
+	display: none;
+}
+
+.keepReading {
+	color: #19868f!important;
+	/*margin-left: 0.75rem;*/
+}
+
+.postList li {
+	margin: 0.75rem 0;
+}
+
+.separator {
+	margin: 0.5rem 0;
+	border-top: solid 1px #142553;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+/*******************
+THE TEAM STYLING
+*******************/
+
+.person {
+	margin: 0.75rem 0;
+}
+
+.person img {
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+}
+
+.teamHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.namePosition p {
+	color: #244e81!important;
+}
+
+.namePosition {
+	margin-left: 0.5rem;
+}
+
+#contentContainer .namePosition .name {
+	font-size: 1.25rem;
+	padding-bottom: 0.25rem;;
+}
+
+.namePosition .position {
+	font-size: 1.125rem;
+	padding: 0;
+}
+
+
+/*******************
+SHARE DIV
+*******************/
+
+.share {
+  text-align: center;
+	border-top: solid 1px #142553;
+	margin-top: 2rem;
+	padding: 1rem;
+}
+
+#contentContainer .share p {
+	text-align: center;
+	font-size: 1.5rem;
+	color: #244e81;
+}
+
+.share ul li {
+	padding: 0;
+}
+
+.share ul li a {
+	display: block;
+	padding: 0.5rem;
+	margin: 0.25rem;
+}
+
+.share ul li a:hover {
+	text-shadow: 0px 0px 4px #19868f;
+}
+
+.share .fa {
+	font-size: 2.5rem;
+}
+
+
+/*******************
+CONTACT PAGE
+*******************/
+
+#contactContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.contactList li {
+	margin: 0.75rem 0;
+}
+
+#contentContainer .contactItem {
+	display: flex;
+	font-size: 1.125rem;
+	align-items: center;
+}
+
+#contentContainer .contact-icons {
+	font-size: 2rem;
+}
+
+#contentContainer .contactItem div {
+	margin-right: 0.75rem;
+}
+
+#contentContainer .contactItem p {
+	text-align: left;
+}
+
+/*Google map location service*/
+#map-canvas {
+	max-width: 550px;
+	height: 400px;
+	display: block;
+	margin: 0 2em;
+}
+
+
+
+/*==================================================
+FOOTER
+===================================================*/
+
+footer {
+	border-radius: 10px;
+	border-top-right-radius: 0;
+	background: rgba(255, 255, 255, 0.75);
+	color: #000;
+	text-align: center;
+	padding: 2%;
+}
+
+footer p {
+	font-size: 1.25rem;
+}
+
+footer div {
+	padding: 0.5rem;
+}
+
+footer div~div {
+	border-top: solid 1px #142553;
+}
+
+.social li {
+	display: inline-block;
+	font-size: 2.5rem;
+}
+
+.social li a {
+	display: block;
+	padding: 0.5rem;
+	margin: 0.25rem;
+	color: #244e81;
+}
+
+.social li a:hover {
+	text-shadow: 0px 0px 4px #19868f;
+}
+
+footer p a {
+	color: #244e81!important;
+	/*font-weight: bolder;*/
+}
+
+footer p a:hover {
+	text-decoration: underline;
+}
+
+footer div.legal p {
+	font-size: 1rem;
+}
+
+/*==================================================
+RESPONSIVE CSS
+===================================================*/
+
+/*-----------------------------------
+Small tablets >=550px width
+------------------------------------*/
+
+@media screen and (min-width: 550px) {
+
+	/**********************
+	HEADER
+	**********************/
+	#headerContainer {
+		margin-bottom: 0.75rem;
+	}
+
+	#headerContainer h1 {
+		font-size: 3rem;
+	}
+
+	#cross {
+		font-size: 6.5rem;
+	}
+
+	/**********************
+	NAV
+	**********************/
+	#navIcon {
+		display: none;
+	}
+
+	#mainMenu ul {
+		display: inline-block;
+		border: none;
+		margin-left: 0.75rem;
+	}
+
+	#mainMenu ul li {
+		display: inline-block;
+		margin: 0;
+		border-left: solid 1px #244e81;
+		border-right: solid 1px #244e81;
+		border-top: solid 1px #244e81;
+		border-top-left-radius: 15px;
+		/*border-top-right-radius: 10px;*/
+	}
+
+	#mainMenu ul li a {
+		border-top-left-radius: 15px;
+		/*border-top-right-radius: 10px;*/
+	}
+
+ .selected {
+		background-color: rgba(255,255,255,0.8);
+		color: #244e81!important;
+		text-shadow: none;
+		border: 0!important;
+	}
+
+	/**********************
+	MAIN CONTENT
+	**********************/
+
+	#contentContainer p {
+		font-size: 1.125rem;
+		line-height: 1.125;
+	}
+
+	.excerpt {
+		display: block;
+	}
+
+
+} /*End 500px break point*/
+
+
+
+/*-----------------------------------
+Larger tablets >=800px width
+------------------------------------*/
+
+@media screen and (min-width: 800px) {
+
+	/**********************
+	NAV
+	**********************/
+
+	#mainMenu ul {
+		margin-left: 1rem;
+	}
+
+	#mainMenu ul li {
+		margin: 0 0.25rem;
+	}
+
+	/**********************
+	MAIN CONTENT
+	**********************/
+
+	#contentContainer {
+		padding: 2.5%;
+	}
+
+	#latestContainer {
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+
+	#latestContainer div {
+		/*margin: 1%;*/
+		padding: 1.5%;
+	}
+
+	#news {
+		border-right: solid 1px #142553;
+		flex-grow: 5;
+	}
+
+	#comingUp {
+		flex-grow: 1
+	}
+
+	#teamList {
+		margin-top: 1rem;
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	#teamList li {
+		max-width: 46%;
+		padding: 1.5%;
+	}
+
+	/***************
+	CONTACT PAGE
+	***************/
+
+	#contactContainer {
+		flex-flow: row wrap;
+		padding: 0 10%;
+	}
+
+	.contactList {
+		max-width: 35%;
+		padding: 5%;
+		margin-bottom: 1rem;
+	}
+
+	/***************
+	COMING UP
+	***************/
+
+	#comingUp ul li {
+		padding: 0.25rem 0;
+	}
+
+	#latestContainer a:hover {
+		text-decoration: underline!important;
+	}
+
+	/**********************
+	FOOTER
+	**********************/
+
+	footer {
+		display: flex;
+		flex-flow: row-reverse;
+		justify-content: center;
+	}
+
+	footer div {
+		padding: 1.5%;
+	}
+
+	footer div~div {
+		border-top: none;
+		border-right: solid 1px #142553;
+	}
+
+	footer .social {
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+} /*End 800px break point*/
+
+@media screen and (min-width: 1100px) {
+
+	/**********************
+	MAIN CONTENT
+	**********************/
+
+	#contentContainer h2 {
+		font-size: 2rem;
+	}
+
+	#contentContainer h3 {
+		font-size: 1.33rem;
+		/*padding: 0.5rem 0 0.25rem;*/
+	}
+
+	#contentContainer p {
+		font-size: 1.25rem;
+		line-height: 1.25;
+		padding: 0.5rem 0;
+	}
+
+	#contentContainer .namePosition .name {
+		font-size: 1.5rem;
+	}
+
+	#contentContainer .namePosition .position {
+		font-size: 1.33rem;
+	}
+
+	#contentContainer .person img {
+		height: 75px;
+		width: 75px;
+	}
+
+
+}
