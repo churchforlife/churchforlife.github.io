@@ -188,13 +188,13 @@ NAVIGATION
 
 #navIcon a {
   display: block;
-  padding: 0.5rem;
+  padding: 1rem;
 	outline: 0;
 }
 
 #mainMenu ul li a {
   display: block;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 #mainMenu ul li:hover {
@@ -510,6 +510,7 @@ Small tablets >=550px width
 	#mainMenu ul li a {
 		border-top-left-radius: 15px;
 		/*border-top-right-radius: 10px;*/
+		padding: 0.5rem;
 	}
 
  .selected {
