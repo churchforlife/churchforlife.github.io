@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <title>{% if page.url == "/" %}
+              Church For Life
+            {% else %}
+              {{ page.title | append: " | Church For Life" }}
+            {% endif %}
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Tangerine|Salsa" rel="stylesheet">
+    <script type="text/javascript" src="https://use.fontawesome.com/0523816ffe.js"></script>
+  </head>
+  <body>
+    <div id="pageContainer">
+      <header>
+        <noscript><div id="noscript">JavaScript is turned off. Please <a href="http://enable-javascript.com/" target="_blank">enable JavaScript</a> for full use of this site.</div></noscript>
+        <div id="headerContainer">
+          <div id="cross">
+            &#x271d;
+          </div>
+          <div>
+            <h1>Church For Life</h1>
+            <h3>Glorifying God - Growing people</h3>
+          </div>
+        </div> <!-- /headerContainer -->
+        <nav id="mainMenu">
+          <div id="navIcon">
+            <a href="#"><i class="fa fa-bars"></i> Menu</a>
+          </div>
+          <ul>
+            {% assign navPages = site.pages | sort: 'navId' %}
+            {% for i in navPages %}
+              {% if i.navId %}
+                <li><a href="{{ i.url }}"
+                {% if page.url contains i.url %}
+                  {% if i.url != "/" and page.url.size > 1 %}
+                    class="selected"
+                  {% endif %}
+                  {% if i.url == page.url %}
+                    class="selected"
+                  {% endif %}
+                {% endif %}
+                >{{ i.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </header>
+      <div id="contentContainer">
+        {{ content }}
+      </div>
+      <footer>
+        <div>
+          <p>Come and <a href="{{ site.url }}/contact.html">worship with us <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+        </div>
+        <div>
+          <p>Connect with us:</p>
+          <ul class="social">
+            <li><a href=""><i class="fa fa-twitter-square" aria-hidden="false"></i></a></li>
+            <li><a href=""><i class="fa fa-facebook-square" aria-hidden="false"></i></a></li>
+            <li><a href=""><i class="fa fa-rss-square" aria-hidden="false"></i></a></li>
+          </ul>
+        </div>
+        <div class="legal">
+          <p>&copy; 2016 Church For Life Incorporated.</p>
+          <p>Site by <a href="">D. Allen</a></p>
+        </div>
+      </footer>
+    </div> <!-- /pageContainer -->
+  </body>
+
+  <!--Loads non-render-critical JavaScript after the page has been rendered-->
+  <script type="text/javascript">
+    function loadScriptPostRender() {
+      var element = document.createElement("script");
+      element.src = "https://code.jquery.com/jquery-1.11.0.min.js";
+      element.type = "text/javascript";
+      element.async = false;
+      document.body.appendChild(element);
+
+      element = document.createElement("script");
+      element.src = "{{ site.baseurl }}/js/c4life.js";
+      element.type = "text/javascript";
+      element.async = false;
+      document.body.appendChild(element);
+    }
+    if (window.addEventListener)
+      window.addEventListener("load", loadScriptPostRender, false);
+    else if (window.attachEvent)
+      window.attachEvent("onload", loadScriptPostRender);
+    else window.onload = loadScriptPostRender;
+  </script>
+</html>
