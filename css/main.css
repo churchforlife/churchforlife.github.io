@@ -263,6 +263,10 @@ MAIN CONTENT
 	flex-direction: column;
 }
 
+#contentContainer p a {
+	color: #19868f;
+}
+
 .excerpt {
 	display: none;
 }
