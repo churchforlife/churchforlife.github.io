@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: New Post Using Prose.io!
 category: general
