@@ -281,6 +281,11 @@ MAIN CONTENT
 	border-top: solid 1px #142553;
 }
 
+.posted {
+	text-decoration: underline;
+	font-style: italic;
+}
+
 em {
 	font-style: italic;
 }
