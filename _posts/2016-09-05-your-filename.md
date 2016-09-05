@@ -7,4 +7,11 @@ This is looking interesting as it allows non technical people to edit the site w
 
 Oh look, it's also got a feature to allow you to add images to your post at the click of a button, let's check this out!
 
-You click on the button, it gives
+You click on the button, it gives you the option of selecting an image on your PC or simply dragging and dropping one onto the diaglog box. Cool. Let's see what happens...
+![P27-top-down.jpg]({{site.baseurl}}/_posts/P27-top-down.jpg)
+I selected a photo of the insides of my guitar amp. It seems to have uploaded this to the /\_posts/ folder of the web site. I can live with that.
+
+### Summary
+
+This system isn't perfect, but it will make it possible for non-technical people to edit this - or any other site hosted on github pages - directly. There are some slight niggles. It will let you browse away from the page you're editing without asking you if you want to save your work, then you lose it all. It also doesn't save it automatically. Still, it's a lot easier for the non-coders to operate, so I'm pretty happy.
+
